@@ -20,8 +20,11 @@ jobs:
       - name: Run tests
         run: deno test
 
-      - name: Compile binary
-        run: deno compile --output dist/hello hello/server.ts
+      - name: Compile binaries
+        run: |
+          deno compile \
+            --target aarch64-apple-darwin \
+            --output dist/hello hello/server.ts
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
