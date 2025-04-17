@@ -46,7 +46,9 @@ server.setRequestHandler(CallToolRequestSchema, (request: CallToolRequest) => {
           `Invalid arguments for getStringLength: ${parsedArgs.error}`
         );
       }
+
       const { input } = parsedArgs.data;
+      console.error("[response]", input, input.length);
       return {
         content: [
           {
