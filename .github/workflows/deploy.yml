@@ -24,7 +24,7 @@ jobs:
         run: |
           deno compile \
             --target aarch64-apple-darwin \
-            --output dist/hello hello/server.ts
+            --output dist/hello hello/index.ts
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
